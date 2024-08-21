@@ -48,6 +48,16 @@ Start-Sleep -Seconds 2
 Write-Host .
 Write-Host .
 Write-Host ---------------------------------------------------------------------------------
+Write-Host -------------------------------ADD PROGRAM TO STARTUP----------------------------
+Write-Host ---------------------------------------------------------------------------------
+Copy-Item -Path "C:\BATCH\Links\BIOS.lnk" -Destination "C:\Users\$env:UserName\'Start Menu'\Programs\Startup"
+Copy-Item -Path "C:\BATCH\winterm.bat" -Destination "C:\Users\$env:UserName\'Start Menu'\Programs\Startup"
+Write-Host .
+Write-Host .
+Start-Sleep -Seconds 2
+Write-Host .
+Write-Host .
+Write-Host ---------------------------------------------------------------------------------
 Write-Host --------------------------EDIT ENVIROMENTAL VARIABLES----------------------------
 Write-Host ---------------------------------------------------------------------------------
 [Environment]::SetEnvironmentVariable("Path", $env:PATH + ";C:\BATCH;C:\PortableApps\Git\bin;C:\PortableApps\nvim\bin", [System.EnvironmentVariableTarget]::User)
@@ -96,8 +106,8 @@ Write-Host .
 Write-Host ---------------------------------------------------------------------------------
 Write-Host ----------------------------MAKE FIREFOX PORTABLE DEFAULT------------------------
 Write-Host ---------------------------------------------------------------------------------
-Set-Location K:\FirefoxPortable
-.\FirefoxPortable2DefaultPrograms.bat
+Set-Location K:\Vivaldi\Application
+.\VivaldiPortable2DefaultPrograms.bat
 Write-Host .
 Write-Host .
 Start-Sleep -Seconds 2
